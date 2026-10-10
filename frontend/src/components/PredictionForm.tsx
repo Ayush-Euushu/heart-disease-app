@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import { HeartDiseaseInput } from '../types/prediction';
 import {
   User,
@@ -9,11 +9,9 @@ import {
   Droplets,
   Activity,
   Gauge,
-  Sparkles,
   Loader2,
   ChevronDown,
-  Stethoscope,
-  Radio
+  Stethoscope
 } from 'lucide-react';
 
 interface PredictionFormProps {
@@ -23,7 +21,7 @@ interface PredictionFormProps {
   loading: boolean;
 }
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -34,12 +32,12 @@ const containerVariants = {
   }
 };
 
-const sectionVariants = {
+const sectionVariants: Variants = {
   hidden: { opacity: 0, y: 14 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.35, ease: [0.16, 1, 0.3, 1] }
+    transition: { duration: 0.35, ease: 'easeOut' }
   }
 };
 
